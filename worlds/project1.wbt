@@ -2,12 +2,44 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.11293781716572868 -0.9851849448950305 -0.12905686268469524 1.764878900101179
-  position -3.933892341796073 2.4689981813809516 -3.217250816101323
+  orientation 0.019305770361659723 0.992933957711803 0.11708733002984721 3.414334062407193
+  position -0.8991253410079301 0.2866541959722496 -1.841901334482085
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 Floor {
+}
+Solid {
+  translation 0 0 1.0000000000000002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry DEF G_BALL Sphere {
+        radius 0.30000000000000004
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE G_BALL
+}
+Solid {
+  translation 0.9099999999999999 0 1.0000000000000002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry USE G_BALL
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE G_BALL
 }
